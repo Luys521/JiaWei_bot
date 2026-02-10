@@ -194,7 +194,17 @@ make ci
 
 ## 🔧 部署
 
-### 使用 systemd
+详细的部署指南请参考 [DEPLOYMENT.md](DEPLOYMENT.md)，包括：
+
+- 直接部署（有公网IP）
+- 使用内网穿透（frp）
+- 使用 systemd 服务
+- 使用 Docker 容器
+- 安全配置和故障排查
+
+### 快速部署
+
+#### 使用 systemd
 
 ```bash
 # 复制服务文件

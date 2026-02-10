@@ -72,3 +72,9 @@ htmlcov/
 .env.local
 config.local.json
 *.backup.*
+
+# 内网穿透工具（frp等）
+frp/
+frpc
+frps
+*.ini
