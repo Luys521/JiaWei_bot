@@ -1,0 +1,27 @@
+{
+  "ai": {
+    "provider": "bailian",
+    "apiKey": "your-api-key-here"
+  },
+  "gateway": {
+    "port": 18789,
+    "host": "127.0.0.1",
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    },
+    "auth": {
+      "mode": "token",
+      "token": "your-secret-token"
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": false,
+      "_comment": "禁用飞书通道，使用 Flask Webhook 转发"
+    }
+  }
+}

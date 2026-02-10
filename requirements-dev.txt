@@ -1,0 +1,25 @@
+# 开发依赖
+-r requirements.txt
+
+# 测试框架
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.11.0
+responses>=0.23.0
+factory-boy>=3.3.0
+
+# 代码质量
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.0.0
+pre-commit>=3.0.0
+
+# 文档
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
+
+# 调试
+ipdb>=0.13.0
+ipython>=8.0.0

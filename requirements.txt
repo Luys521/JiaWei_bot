@@ -1,0 +1,10 @@
+# 生产依赖
+flask>=2.3.0,<3.0.0
+requests>=2.31.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+
+# 可选依赖（推荐添加）
+# pydantic>=2.0.0  # 数据验证
+# structlog>=23.0.0  # 结构化日志
+# prometheus-client>=0.17.0  # 监控指标
+# gunicorn>=21.0.0  # WSGI服务器
