@@ -3,8 +3,11 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)](https://github.com/Luys521/JiaWei_bot/releases)
 
-基于 Flask 的智能助手，支持群聊 @触发 和 私聊 OpenClaw 集成。
+> 珈伟新能的智能飞书机器人 - 基于 Flask 的企业级 AI 助手
+
+支持群聊 @触发智能对话 和 私聊 OpenClaw Agent 集成，提供完整的任务处理和文件操作能力。
 
 ## ✨ 功能特性
 
@@ -15,14 +18,57 @@
 - 📊 **监控统计**: 请求统计、健康检查接口
 - 🔒 **安全防护**: 频率限制、IP白名单、事件验证
 
+## 🏗️ 架构设计
+
+```
+┌─────────────────────────────────────────┐
+│          飞书开放平台                    │
+│      (单一应用 - Webhook 模式)          │
+└─────────────────┬───────────────────────┘
+                  │
+                  │ HTTP Webhook
+                  ↓
+┌─────────────────────────────────────────┐
+│       远端服务器 (Flask)                 │
+│                                         │
+│  ┌────────────────────────────────┐    │
+│  │  server.py (主服务)            │    │
+│  │  端口: 8081                     │    │
+│  └──────┬──────────────┬──────────┘    │
+│         │              │                │
+│  ┌──────▼──────┐  ┌───▼──────────┐    │
+│  │  私聊消息   │  │  群聊消息     │    │
+│  │  (p2p)      │  │  (group)      │    │
+│  └──────┬──────┘  └───┬──────────┘    │
+│         │              │                │
+│  ┌──────▼──────┐  ┌───▼──────────┐    │
+│  │  OpenClaw   │  │  AI Processor │    │
+│  │  Bridge     │  │  (DeepSeek)   │    │
+│  │  Agent能力  │  │  对话能力     │    │
+│  └─────────────┘  └──────────────┘    │
+└─────────────────────────────────────────┘
+```
+
+### 消息流程
+
+**群聊消息**：
+```
+用户@机器人 → Flask接收 → 任务分类 → AI处理 → 卡片回复
+```
+
+**私聊消息**：
+```
+用户发消息 → Flask接收 → OpenClaw桥接 → Agent处理 → 文本回复
+```
+
 ## 🚀 快速开始
 
 ### 安装
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/feishu-ai-bot.git
-cd feishu-ai-bot
+git clone https://github.com/Luys521/JiaWei_bot.git
+cd JiaWei_bot
 
 # 创建虚拟环境
 python -m venv venv
@@ -154,6 +200,35 @@ docker run -d -p 8081:8081 --env-file .env feishu-ai-bot
 
 欢迎提交 Issue 和 PR！
 
+## 📋 更新日志
+
+查看 [CHANGELOG.md](CHANGELOG.md) 了解详细的版本更新记录。
+
+### 最新版本 v1.1.0 (2026-02-10)
+
+**🎉 重大更新**
+- ✨ 完整重构为现代化 Python 包结构
+- ✨ 添加 OpenClaw 桥接器，支持私聊 AI Agent
+- ✨ 使用 dataclass 管理配置，类型安全
+- ✨ 完善的测试框架和 CI/CD
+- 📚 完整的项目文档
+
+**🐛 修复**
+- 🔧 修复 OpenClaw 集成的导入错误
+- 🔧 优化错误处理和日志记录
+
+**📦 依赖更新**
+- 升级到 Python 3.9+
+- 添加 pytest、black、mypy 等开发工具
+
+查看完整更新历史：[CHANGELOG.md](CHANGELOG.md)
+
+## 📞 联系方式
+
+- **项目主页**: https://github.com/Luys521/JiaWei_bot
+- **问题反馈**: https://github.com/Luys521/JiaWei_bot/issues
+- **企业**: 珈伟新能
+
 ## 📄 许可证
 
-MIT License
+MIT License - 详见 [LICENSE](LICENSE) 文件
