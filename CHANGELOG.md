@@ -79,12 +79,10 @@
   ```
 
 #### 文档完善
-- **新增文档**
-  - `PROJECT_STRUCTURE.md` - 项目结构说明
-  - `MIGRATION_GUIDE.md` - 迁移指南
-  - `MIGRATION_REPORT.md` - 迁移报告
-  - `CLEANUP_REPORT.md` - 清理报告
+- **项目文档**
+  - `README.md` - 完整的项目说明文档
   - `CHANGELOG.md` - 更新日志（本文件）
+  - `LICENSE` - MIT 开源协议
 
 - **配置模板**
   - `.env.example` - 环境变量模板

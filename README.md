@@ -1,13 +1,44 @@
-# 飞书AI机器人
+# 飞书 AI 机器人 | JiaWei Bot
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)](https://github.com/Luys521/JiaWei_bot/releases)
+[![AI Powered](https://img.shields.io/badge/🤖_AI-Powered-ff69b4.svg)](https://github.com/Luys521/JiaWei_bot)
 
-> 珈伟新能的智能飞书机器人 - 基于 Flask 的企业级 AI 助手
+> 🚀 珈伟新能的智能飞书机器人 - 基于 Flask 的企业级 AI 助手  
+> 💡 目标是为了实现智能客服和 Agent 办公集成
 
-支持群聊 @触发智能对话 和 私聊 OpenClaw Agent 集成，提供完整的任务处理和文件操作能力。
+---
+
+## 📖 关于本项目
+
+本项目采用**纯 Vibe Coding** 开发模式，由人类开发者与 AI 协作完成。
+
+**🤖 AI 协作声明**：
+> *作者信奉"懒惰是程序员的美德"，本项目的架构设计、代码实现、文档编写均由 AI 辅助完成。*  
+> *如果你发现任何 AI 生成的痕迹，恭喜你，这正是我们想要的效果！*  
+> *欢迎任何不服的 AI 进行代码审查和技术挑战。*
+
+**💪 技术栈**：
+
+- **后端框架**：Flask 2.3+
+- **AI 集成**：DeepSeek、Kimi 2.5
+- **开发工具**：OpenCode/ Trae/ StepFun
+- **部署方式**：systemd / Docker
+
+---
+
+## 🙏 致谢
+
+本项目得益于以下优秀的开源项目、工具和 AI 模型的支持：
+
+- 免费的大模型：https://integrate.api.nvidia.com/v1
+- 免费的CLI/IDE：OpenCode / TraeCN / StepFun
+
+---
+
+向所有开源贡献者和 AI 技术提供者致敬！🌟 正是因为有了你们的卓越工作，本项目才得以实现。
 
 ## ✨ 功能特性
 
@@ -164,9 +195,7 @@ make ci
 
 ## 📖 文档
 
-- [部署指南](docs/DEPLOYMENT.md) - 详细部署步骤
-- [架构设计](docs/ARCHITECTURE.md) - 系统架构说明
-- [API文档](docs/API.md) - API接口文档
+详细的部署步骤和架构说明请参考本 README 文档的相关章节。
 
 ## 🔧 部署
 
@@ -225,9 +254,8 @@ docker run -d -p 8081:8081 --env-file .env feishu-ai-bot
 
 ## 📞 联系方式
 
-- **项目主页**: https://github.com/Luys521/JiaWei_bot
-- **问题反馈**: https://github.com/Luys521/JiaWei_bot/issues
-- **企业**: 珈伟新能
+- **WeiXin**:luyushun007
+- **邮箱**: luyushun@qq.com 
 
 ## 📄 许可证
 
